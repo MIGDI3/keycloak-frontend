@@ -1,0 +1,10 @@
+{
+    "/": {
+      "target": "https://sso-sso1.apps.cluster-xgt47.xgt47.sandbox811.opentlc.com/auth",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/": ""
+      }
+    }
+} 

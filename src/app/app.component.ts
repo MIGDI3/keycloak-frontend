@@ -14,7 +14,7 @@ export class AppComponent {
   }
 
   authConfig: AuthConfig = {
-    issuer : 'https://sso-sso1.apps.cluster-xgt47.xgt47.sandbox811.opentlc.com/auth', //provider de autenticacion
+    issuer : 'https://sso-sso1.apps.cluster-xgt47.xgt47.sandbox811.opentlc.com/auth/realms/tutorial', //provider de autenticacion
     redirectUri: window.location.origin,
     clientId: 'tutorial-frontend',
     responseType: 'code',
