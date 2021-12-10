@@ -16,6 +16,6 @@ export class LoginService {
     this.oauthService.logOut();
   } 
 
-
+  
 
 }
