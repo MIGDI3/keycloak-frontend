@@ -38,7 +38,8 @@ export class AppComponent {
       if(this.oAuthService.getIdentityClaims()){
         this.isLogged = this.getIsLogged();
         this.isAdmin = this.getIsAdmin();
-        this.username = ""; //this.oAuthService.getIdentityClaims()['preferred_username'];
+        const claims = this.oAuthService.getIdentityClaims();
+        this.username =  ' ' + claims;
       }
     });
   }
