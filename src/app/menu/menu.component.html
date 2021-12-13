@@ -11,7 +11,7 @@
               <i class="fas fa-home"></i> Incio</a>
         </li>
         <li *ngIf="isLogged" class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" routerLink="/lista">
               <i class="fas fa-list-alt"></i> Lista</a>
         </li>
         <li *ngIf="isAdmin" class="nav-item">
@@ -23,9 +23,15 @@
               <i class="fas fa-plus-circle"></i> Nuevo</a>
         </li>  
       </ul>
-      <button *ngIf="!isLogged" class="btn btn-outline-success" (click)="login()"><i class="fas fa-sign-in-alt"></i> Inicio Sesión</button>
-      <button *ngIf="isLogged" class="btn btn-outline-warning" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
-
+      <ul class="navbar-nav ml-auto">
+        <li *ngIf="isLogged" class="nav-item mr-3">
+          <a class="nav-link" href="#">
+              Bienvenido {{username}}</a>
+        </li>
+        <button *ngIf="!isLogged" class="btn btn-outline-warning mr-3" routerLink="/signup"><i class="fas fa-user-plus"></i> Agregar usuario</button>
+        <button *ngIf="!isLogged" class="btn btn-outline-success" (click)="login()"><i class="fas fa-sign-in-alt"></i> Inicio Sesión</button>
+        <button *ngIf="isLogged" class="btn btn-outline-warning" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+      </ul>
     </div>
   </div>
 </nav>
